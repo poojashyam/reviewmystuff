@@ -25,7 +25,6 @@ Clazz.item_imagewidget = Clazz.extend(
      {$(this).animate({width: "75px"}, 'slow');
    });
 });
-        
         },
         postRender :function(){
             this.jq1();
