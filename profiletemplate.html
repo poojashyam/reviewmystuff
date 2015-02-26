@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<style>
+.profile{
+    
+    border:1px solid green;
+    width:200px;
+    font-size:10pt;
+    background-color: #F8E0E0;
+    color:white;
+    float:right;
+    top:100px;
+    padding-bottom:0px;
+}
+    .profile img{
+        align-content:center;
+        
+    }
+    .tableprofile tr{
+        cell-padding:10px;
+    }
+
+</style>
+
+
+<div class = "profile">
+    {{#with profile}}
+   <center><h3>{{Username}}</h3></center>
+    <center><img src = "{{profilePicture}}" alt = "logo" style="width:150px";></center>
+    <table cellpadding="5" cellspacing="5">
+        <tr><td>Status</td>
+        <td>{{UserStatus}}</td></tr>
+        <tr><td>Interests</td>
+        <td>{{Interests}}</td></tr>
+        <tr><td>Number of Reviews</td>
+        <td>{{NumberOfReviews}}</td></tr>
+        <tr><td>Followers</td>
+            <td>{{Followers}}</td></tr>
+        <tr><td>Following</td>
+        <td>{{Following}}</td></tr>
+        <tr><td>Friends</td>
+        <td>{{NoOfFriends}}</td></tr>
+    {{/with}}
+
+
+</div>
+

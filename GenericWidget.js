@@ -20,6 +20,10 @@ Clazz.GenericWidget = Clazz.extend(
         var widgetacontainer = document.getElementById("widget1container");
         widgeta.render(widgetacontainer);
 
+        var widgetd = new Clazz.profilewidget(this.config.data1);
+        var widgetdcontainer = document.getElementById("widget4container");
+        widgetd.render(widgetdcontainer);
+           
         var widgetb = new Clazz.recentlyviewedwidget(this.config.data1);
         var widgetbcontainer = document.getElementById("widget2container");
         widgetb.render(widgetbcontainer);
@@ -28,9 +32,7 @@ Clazz.GenericWidget = Clazz.extend(
         var widgetccontainer = document.getElementById("widget3container");
         widgetc.render(widgetccontainer);
            
-           var widgetd = new Clazz.item_imagewidget(this.config.data1);
-        var widgetdcontainer = document.getElementById("widget4container");
-        widgetd.render(widgetdcontainer);
+        
 
     } 
 });

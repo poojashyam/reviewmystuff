@@ -1,43 +1,51 @@
 <!DOCTYPE html>
-<style type="text/css">
-    #scroller {
-        position: relative;
+<style>
+.description{
+margin :50px 250px;
+    position:relative;
+    padding: 10px;
+}
+    .description img{
+        border: 1px solid green;
+        float:left;
+        padding:20px;
+        
     }
-    #scroller .innerScrollArea {
-        overflow: hidden;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-    }
-    #scroller ul {
-        padding: 0;
-        margin: 0;
-        position: relative;
-    }
-    #scroller li {
-        padding: 0;
-        margin: 0;
-        list-style-type: none;
-        position: absolute;
-    }
+
 </style>
 <body>
- 
-  <button id="leftButton" onclick='moveLeft()'>&lt;</button>
-  <button id="rightButton" onclick='moveRight()'>&gt;</button>
-  <div id="galleryContainer">
-    <div id="gallery">
-      <img src = "jaguarxf.jpg" alt = "image"/>
-<img src = "productimage.jpg" alt = "image"/>
-<img src = "productimage2.jpg" alt = "image"/>
-<img src = "chandelier.jpg" alt = "image"/>
-<img src = "table.jpg" alt = "image"/>
-    </div>
-    <div id="caption">Photo Caption</div>
-    <div id="loading">Please wait...</div>
-  </div>
+<div class = "description">
+    <center><h3>Your Recent Review</h3></center>
+    {{#each stuff_form}}
+    <div id = "thumbnails" >
+    <img id = "imageclick" src = "{{product_image1}}" alt = "logo" style = "width:310px; height : 200px";/></td></div>
+    <table class = "showhide">
+    
+        <tr><td>My Rating</td>
+        <td>{{rating}}</td></tr>
+    <tr><td>Date of Purchase</td>
+        <td>{{purchaseDate}}</td></tr>
+    <tr><td>Amount Paid</td>
+        <td>{{costpaid}}</td></tr>
+        
+    <tr><td>Suggested Retail</td>
+        <td>{{SuggestedRetail}}</td></tr>
+        
+    <tr><td>Place Purchased</td>
+        <td>{{placepurchased}}</td></tr>
+    <tr><td>My point of view</td>
+        <td>{{description}}</td></tr>
+    <tr><td>Pros</td>
+        <td>{{pros}}</td></tr>
+    <tr><td>Cons</td>
+        <td>{{cons}}</td></tr>
+    <tr><td>Recommended?</td>
+        <td>{{Recommend}}</td></tr>
+            
+    </table>
+    {{/each}}
+</div>
+  
  
 </body>
 

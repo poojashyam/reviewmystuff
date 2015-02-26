@@ -2,18 +2,16 @@
 <head>
     
     <style type="text/css"> 
-        .formdesign{
-             margin-top: 50px;
-        }
+        
         .tabledesign{
+            margin-left: 10px;
             border:1px solid green;
-            float: right;
             padding-top:5px;
-            width:280px;
-            position:relative;
+            width:180;
             font-family: 'Courier';
             font-size: 9pt;
-            
+            top: 100px;
+            position:absolute;
             
         }
         .tabledesign table td{
@@ -26,21 +24,18 @@
         }
         
         .buttonfeed{
-            width: 280px;
             font-family: 'courier';
             font-size: 15pt;
             background-color:green;
-            float: right;
-            positio :relative;
         }
       
     </style>
 </head>
 
-<div id = "template2">
     
-    {{#with recentlyviewed}}
+   
    <div class = "tabledesign">
+        {{#with recentlyviewed}}
         <table>
             <tr><th colspan="2" >You Recently Viewed</th></tr>
             <tr>
@@ -76,8 +71,8 @@
             </div>
            
         </table>
-         <input class = "buttonfeed" type=button value="FEED" style = "width:280px;  height:30px";/>    
-        </div>
+         <input class = "buttonfeed" type=button value="FEED" style = "width:180px;  height:30px";/>    
+       
    
     {{/with}}
 </div>

@@ -11,24 +11,21 @@ Clazz.descriptionwidget = Clazz.extend(
             this.templateUrl = "descriptiontemplate.html";
             this.data = config;
         },
-        gallery: function(){
-            $(document).ready(function(){
-        var scroller = $('#scroller div.innerScrollArea');
-        var scrollerContent = scroller.children('ul');
-        scrollerContent.children().clone().appendTo(scrollerContent);
-        var curX = 0;
-        scrollerContent.children().each(function(){
-            var $this = $(this);
-            $this.css('left', curX);
-            curX += $this.outerWidth(true);
-        });
-        var fullW = curX / 2;
-        var viewportW = scroller.width();
+        descQuery1:function(){
+        
+        
+        $('.showhide').hide();
+        
+        $('#imageclick').click(function(){
+        $(this).closest('table').find("table.showhide").toggle();
+        
 
-        scroller.css('overflow-x', 'auto');
-    });
+    })
+        
     },
-        postRender : function(){
-               this.rViewed();
-           }
+        postRender:function(){
+        this.descQuery1();
+    }
+       
 });
+
