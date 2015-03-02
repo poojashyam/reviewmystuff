@@ -17,10 +17,9 @@ margin :50px 250px;
 <div class = "description">
     <center><h3>Your Recent Review</h3></center>
     {{#each stuff_form}}
-    <div id = "thumbnails" >
-    <img id = "imageclick" src = "{{product_image1}}" alt = "logo" style = "width:310px; height : 200px";/></td></div>
-    <table class = "showhide">
+    <img class = "imageclick" src = "{{product_image1}}" alt = "logo" style = "width:310px; height : 200px";/></td>
     
+    <table class="showhide">
         <tr><td>My Rating</td>
         <td>{{rating}}</td></tr>
     <tr><td>Date of Purchase</td>
@@ -43,6 +42,7 @@ margin :50px 250px;
         <td>{{Recommend}}</td></tr>
             
     </table>
+        
     {{/each}}
 </div>
   

@@ -11,16 +11,12 @@ Clazz.descriptionwidget = Clazz.extend(
             this.templateUrl = "descriptiontemplate.html";
             this.data = config;
         },
-        descQuery1:function(){
         
-        
-        $('.showhide').hide();
-        
-        $('#imageclick').click(function(){
-        $(this).closest('table').find("table.showhide").toggle();
-        
-
-    })
+        descQuery1:function(){    
+            $('.showhide').hide();
+        $('.imageclick').click(function(){  
+           $('.showhide').toggle();  
+        });
         
     },
         postRender:function(){
